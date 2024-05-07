@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Order level fact table. sales order information
+    columns:
+      - name: orderid
+        description: Source key used for drill through
+      - name: customerkey
+        description: Dimension key for dim_customer
+      - name: orderdatekey
+        description: role play Order Date Dimension key for dim_date
+      - name: productkey
+        description: Dimension FK for dim_product
+      - name: quantity
+        description: total quantity of products in order
+      - name: totalamount
+        description: additive fact for total quantity of product sold on order
+      - name: unitprice
+        description: retail price of the product

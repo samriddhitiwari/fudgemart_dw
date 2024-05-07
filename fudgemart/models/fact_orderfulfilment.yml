@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fact_sales_analysis
+    description: Order level fact table. Transaction One row per product_purchase  per customer
+    columns:
+      - name: orderid
+        description: Source key used for drill through
+      - name: customerkey
+        description: Dimension key for dim_customer
+      - name: orderdatekey
+        description: role play Order Date Dimension key for dim_date
+      - name: shippeddatekey
+        description: role play Shipped Date  Dimension key for dim_date
+      - name: productkey
+        description: Dimension FK for dim_product
+      - name: quantity
+        description: total quantity of products in order
+      - name: lag_days
+        description: the number of days elapsed from order to shipped
